@@ -12,6 +12,14 @@ spec:
   containers:
     - name: prometheus-net
       image: daverant/prometheus-net:7
+      ports:
+        - containerPort: 1234
+      resources:
+        requests:
+          cpu: 100m
+          memory: 256Mi
+        limits:
+          memory: 256Mi
 
 ---
 
@@ -29,3 +37,11 @@ spec:
   containers:
     - name: prometheus-net
       image: daverant/prometheus-net:8
+      ports:
+        - containerPort: 1234
+      resources:
+        requests:
+          cpu: 100m
+          memory: 256Mi
+        limits:
+          memory: 256Mi
