@@ -9,7 +9,7 @@ metadata:
 spec:
   nodeSelector:
     purpose: general
-    nodegroup-colour: red
+    nodegroup-colour: black
   containers:
     - name: prometheus-net
       image: daverant/prometheus-net:7
@@ -35,7 +35,7 @@ metadata:
 spec:
   nodeSelector:
     purpose: general
-    nodegroup-colour: red
+    nodegroup-colour: black
   containers:
     - name: prometheus-net
       image: daverant/prometheus-net:8
