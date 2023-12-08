@@ -1,6 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
+  namespace: default
   annotations:
     prometheus.io/scrape: "true"
     prometheus.io/port: "1234"
@@ -26,6 +27,7 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
+  namespace: default
   annotations:
     prometheus.io/scrape: "true"
     prometheus.io/port: "1234"
