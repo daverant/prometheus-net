@@ -4,7 +4,7 @@ namespace PrometheusNetRepro;
 
 internal sealed class MassTransitService : BackgroundService
 {
-    readonly IBus _bus;
+    private readonly IBus _bus;
 
     public MassTransitService(IBus bus)
     {

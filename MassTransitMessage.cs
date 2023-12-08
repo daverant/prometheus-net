@@ -2,5 +2,5 @@ namespace PrometheusNetRepro;
 
 internal sealed class MassTransitMessage
 {
-    public string Value { get; set; }
+    public required string Value { get; init; }
 }

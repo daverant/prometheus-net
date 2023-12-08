@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/port: "1234"
+  name: prometheus-net-7
+spec:
+  nodeSelector:
+    purpose: general
+    nodegroup-colour: red
+  containers:
+    - name: prometheus-net
+      image: daverant/prometheus-net:7
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/port: "1234"
+  name: prometheus-net-8
+spec:
+  nodeSelector:
+    purpose: general
+    nodegroup-colour: red
+  containers:
+    - name: prometheus-net
+      image: daverant/prometheus-net:8
