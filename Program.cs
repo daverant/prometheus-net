@@ -14,6 +14,7 @@ builder.Services.AddMassTransit(x =>
     x.AddConsumer<MassTransitConsumer>();
     x.UsingInMemory((context, cfg) =>
     {
+        cfg.UsePrometheusMetrics();
         cfg.ConfigureEndpoints(context);
     });
 });
