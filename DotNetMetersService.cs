@@ -1,3 +1,4 @@
+using Prometheus;
 using System.Diagnostics.Metrics;
 
 namespace PrometheusNetRepro;
@@ -7,6 +8,11 @@ namespace PrometheusNetRepro;
 /// </summary>
 public sealed class DotNetMetersService : BackgroundService
 {
+    static DotNetMetersService()
+    {
+        Metrics.ConfigureEventCounterAdapter(x => x.EventSourceFilterPredicate = _ => true);
+    }
+
     protected override Task ExecuteAsync(CancellationToken stoppingToken)
     {
         // The meter object is the "container" for all the .NET metrics we will be publishing.
