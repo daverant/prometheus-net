@@ -10,18 +10,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="MassTransit" Version="8.1.2" />
+        <PackageReference Include="MassTransit" Version="8.1.1" />
+        <PackageReference Include="MassTransit.Prometheus" Version="8.1.1" />
         <PackageReference Include="prometheus-net" Version="7.0.0" />
         <PackageReference Include="prometheus-net.AspNetCore" Version="7.0.0" />
         <PackageReference Include="prometheus-net.DotNetRuntime" Version="4.4.0" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Properties\" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <None Remove="Properties\launchSettings.json" />
     </ItemGroup>
 
 </Project>
